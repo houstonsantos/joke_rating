@@ -4,13 +4,13 @@
 
 </div>
 
-Nesta competição da Analytics Vidhya temos que prever notas que são atribuidas a piadas, poderiamos abordar esse problema de outra pespectiva, mas temos aqui um problema de recomendação (**RecSys**). Para validarmos o modelo vou utilizar a métrica **RMSE** estipulada pela competição.
+Nesta competição da Analytics Vidhya temos que prever notas que são atribuidas a piadas, vamos cria um modelo de recomendação (**RecSys**). Para validarmos o modelo vou utilizar a métrica **RMSE** estipulada pela competição.
 
 <p align="center">
     <img width="700" height="250" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*kgBD8OuP7SMsL63gcsQ90Q.png">
 </p>
 
-Os exemplos são diversos: a Amazon recomenda livros (ou qual coisa do marketplace), a Netflix faz recomendação de Filmes, o Mendeley recomenda artigos ciêntíficos, a Globo.com recomenda notícias e o Spotify as músicas.
+Os exemplos são diversos: a Amazon recomenda livros (ou qual coisa do marketplace), a Netflix faz recomendação de Filmes, o Mendeley recomenda artigos ciêntíficos, a Globo.com recomenda notícias e o Spotify às músicas.
 
 *   Temos algumas opções de algoritimos de Machine Learning para RecSys.
 
@@ -19,4 +19,14 @@ Os exemplos são diversos: a Amazon recomenda livros (ou qual coisa do marketpla
     *   Sistemas Híbridos (Hybrid)
     *   Cold-Start
 
-Aqui não abordarei as vantagens e desvatagens deles, na seção Modelo onde criaremos nossa máquina preditiva, abordarei um pouco sobre a escolha realizada.
+### Approach
+
+Utilizando à biblioteca [_**Surprise**_](https://surpriselib.com/), irei cria um modelos utilizando **SVD** _(Singular Value Decomposition)_, _Filtragem Colaborativa_.
+
+O **SVD** realiza a fatoração de matrizes, isso pode ser um problema quando temos muitos dados, pois às matrizes seram muito esparsas, isso resultarar em custo computacional muito alto levando muito tempo de processamento. Mas vamos em frente....
+
+$$
+\begin{align} 
+\hat r_i = \mu + b_u + b_i + q_i^T p_u
+\end{align}
+$$
