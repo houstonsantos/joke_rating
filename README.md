@@ -23,6 +23,12 @@ Os exemplos são diversos: a Amazon recomenda livros (ou qual coisa do marketpla
 
 Utilizando à biblioteca [_**Surprise**_](https://surpriselib.com/), irei cria um modelos utilizando **SVD** _(Singular Value Decomposition)_, _Filtragem Colaborativa_.
 
+<div align="center">
+
+![Filtragem Colaborativa](https://miro.medium.com/v2/resize:fit:638/format:webp/0*e3_p3-HIh8DCin4m)
+
+</div>
+
 O **SVD** realiza a fatoração de matrizes, isso pode ser um problema quando temos muitos dados, pois às matrizes seram muito esparsas, isso resultarar em custo computacional muito alto levando muito tempo de processamento. Mas vamos em frente....
 
 $$
@@ -30,6 +36,8 @@ $$
 \hat r_i = \mu + b_u + b_i + q_i^T p_u
 \end{align}
 $$
+
+### Resultado
 
 Trabalhando algumas técnicas como aleatoriedade, otimização e validação cruzada, saimos de uma RMSE 4.2825453692 para 3.981784901286 com nosso dataset de treino e teste.
 
