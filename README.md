@@ -37,11 +37,11 @@ $$
 \end{align}
 $$
 
-### Resultado
+### Resultado 
 
 Trabalhando algumas técnicas como aleatoriedade, otimização e validação cruzada, saimos de uma RMSE 4.2825453692 para 3.981784901286 com nosso dataset de treino e teste.
 
-Em validação com um dataset com 537880 registros nossa RMSE vencedora foi de 3.9886220594, deviando muito pouco de nossa RMSE final de treino e teste. 
+Em validação com um dataset com 537880 registros nossa RMSE vencedora foi de 3.9886220594 🥇, deviando muito pouco de nossa RMSE final de treino e teste. 
 
 <p align="center">
     <img width="600" height="375" src="img/02.png">
