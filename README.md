@@ -39,9 +39,32 @@ $$
 
 ### Resultado 
 
-Trabalhando algumas técnicas como aleatoriedade, otimização e validação cruzada, saimos de uma **RMSE** 4.2825453692 para 3.981784901286 com nosso dataset de treino e teste.
+Trabalhando algumas técnicas como aleatoriedade, otimização e validação cruzada, lembrando que nossa métrica oficial da competição é a RMSE...
 
-Em validação com um dataset com 537880 registros nossa **RMSE vencedora foi de 3.9886220594** 🥇, deviando muito pouco de nossa **RMSE** final de treino e teste. 
+$$
+\begin{align}
+\text{RMSE} = \sqrt {\frac{1}{n} \sum_{i=1}^n (y_i - \hat y_i)^2} 
+\end{align}
+$$
+
+* `Primeiro resultado` com o modelo default foi 4.2885941442.
+* `Segundo resultado` explorando à aleatoriedade foi 4.2755483293.
+* `Terceiro resultado` realizando a otimização do modelo foi 4.0125360492.
+* `Quarto resultado` realizando à cross-validation no modelo otimizado foi 3.9817849012.
+
+Nossa RMSE final foi 3.9817849012, este é resultado para nosso submission.
+
+Agora vamos dar uma olhada como ficou nossa MAE...
+
+* `MAE cross-validation` 3.0384427405
+
+$$
+\begin{align}
+\text{MAE} = \frac{1}{n} \sum_{i=1}^n | y_i - \hat y_i | 
+\end{align}
+$$
+
+Em validação com um dataset com 537880 registros nossa **RMSE vencedora foi de 3.9886220594** 🥇, deviando muito pouco de nossa **RMSE** final de treino e teste. Nosso erro foi de apenas **0.006837158199999749** ficou TOP.
 
 <p align="center">
     <img width="600" height="375" src="img/02.png">
